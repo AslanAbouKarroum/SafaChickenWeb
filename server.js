@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors')
 require('dotenv').config();
+const serverless = require('serverless-http');
+// exports.handler = serverless(app);
 // const bodyParser = require('body-parser');
 
 const app = express();
@@ -14,7 +16,7 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs')
 
 // connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect('mongodb+srv://aslaneak153:YJkU7bxZ0VSMla7U@cluster0.pyym5kw.mongodb.net/restaurant_reservations?retryWrites=true&w=majority');
 
 //https://nodejs.org/api/events.html#emitteroneventname-listener
 const db = mongoose.connection
