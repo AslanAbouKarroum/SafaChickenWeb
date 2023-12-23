@@ -6,10 +6,10 @@ Array.from(deleteButton).forEach((element)=>{
 })
 
 async function deleteReservation(){
-   const mName = this.parentNode.parentNode.childNodes[1].childNodes[1].innerText
-   const mAddress = this.parentNode.parentNode.childNodes[3].childNodes[1].innerText
-   const mPhone = this.parentNode.parentNode.childNodes[5].childNodes[1].innerText
-   const mMessage = this.parentNode.parentNode.childNodes[7].childNodes[1].innerText
+   const mName = this.parentNode.parentNode.childNodes[1].innerText
+   const mAddress = this.parentNode.parentNode.childNodes[3].innerText
+   const mPhone = this.parentNode.parentNode.childNodes[5].innerText
+   const mMessage = this.parentNode.parentNode.childNodes[7].innerText
    try{
       const response = await fetch('deleteReservation', {
          method: 'delete',
