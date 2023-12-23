@@ -2,21 +2,22 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors')
 require('dotenv').config();
-const serverless = require('serverless-http');
+// const serverless = require('serverless-http');
 // exports.handler = serverless(app);
 // const bodyParser = require('body-parser');
 
 const app = express();
 
 // Middleware
+app.set('view engine', 'ejs')
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(cors());
 app.use(express.static('public'));
-app.set('view engine', 'ejs')
+
 
 // connect to MongoDB
-mongoose.connect('mongodb+srv://aslaneak153:YJkU7bxZ0VSMla7U@cluster0.pyym5kw.mongodb.net/restaurant_reservations?retryWrites=true&w=majority');
+mongoose.connect(process.env.MONGODB_URI);
 
 //https://nodejs.org/api/events.html#emitteroneventname-listener
 const db = mongoose.connection
@@ -52,6 +53,8 @@ app.post('/submit', async(req,res)=>{
     }
 })
 
+
+
 app.get('/',(req, res)=>{
     res.sendFile(__dirname + '/public/index.html')
 })
@@ -66,6 +69,15 @@ app.get('/reservations', (req, res) => {
     .catch(error => console.error(error))
   })
 
+app.delete('/deleteReservation',(request, response)=>{
+    console.log(request)
+    db.collection('contacts').deleteOne({name: request.body.nameS})
+    .then(result => {
+        console.log('Reservation Deleted')
+        response.json('Reservation Deleted')
+    })
+    .catch(error=> console.error(error))
+})
 
 // Start server
 const PORT = 5000;
