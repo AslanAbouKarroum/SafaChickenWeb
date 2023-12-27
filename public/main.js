@@ -15,10 +15,10 @@ async function deleteReservation(){
          method: 'delete',
          headers:{'Content-Type': 'application/json'},
          body: JSON.stringify({
-            'nameS' : mName
-            // 'addressS' : mAddress,
-            // 'phoneS' : mPhone,
-            // 'message': mMessage
+            'nameS' : mName,
+            'addressS' : mAddress,
+            'phoneS' : mPhone,
+            'messageS': mMessage
          })
       })
       const data = await response.json()

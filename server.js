@@ -71,8 +71,12 @@ app.get('/reservations', (req, res) => {
   })
 
 app.delete('/deleteReservation',(request, response)=>{
-    console.log(request)
-    db.collection('contacts').deleteOne({name: request.body.nameS})
+    db.collection('contacts').deleteOne({
+        name: request.body.nameS,
+        address: request.body.addressS,
+        phone: Number(request.body.phoneS),
+        message: request.body.messageS
+    })
     .then(result => {
         console.log('Reservation Deleted')
         response.json('Reservation Deleted')
@@ -81,7 +85,6 @@ app.delete('/deleteReservation',(request, response)=>{
 })
 
 // Start server
-const PORT = 5000;
-app.listen(PORT, ()=>{
-    console.log(`Server connected on ${PORT}`)
+app.listen( process.env.PORT || PORT, ()=>{
+    console.log(`Server connected on ${process.env.PORT}`)
 })
