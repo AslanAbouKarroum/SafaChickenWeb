@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors')
 require('dotenv').config();
+const PORT = 5000;
 // const serverless = require('serverless-http');
 // exports.handler = serverless(app);
 // const bodyParser = require('body-parser');
@@ -86,5 +87,5 @@ app.delete('/deleteReservation',(request, response)=>{
 
 // Start server
 app.listen( process.env.PORT || PORT, ()=>{
-    console.log(`Server connected on ${process.env.PORT}`)
+    console.log(`Server connected on ${PORT}`)
 })

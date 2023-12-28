@@ -113,6 +113,10 @@ a {
   background-color: rgb(128, 2, 2);
 }
 
+.sendBtn:hover {
+  background-color: rgb(128, 2, 2);
+}
+
 .bg-black {
   background-color: black;
 }
@@ -178,6 +182,7 @@ a {
   font-size: 26px;
   border-bottom: 1px solid lightgrey;
   display: flex;
+  white-space: nowrap;
   align-items: center;
   text-align: center;
 }
@@ -262,7 +267,9 @@ a {
   max-height: 65px !important;
 }
 
-
+.addToCart:hover {
+  cursor: pointer;
+}
 
 .iconColor {
   color:rgb(128, 2, 2);

@@ -66,7 +66,7 @@ function removeCartItem(event) {
     localStorage.setItem('totalCost', totalCost);
     productNumbers = productNumbers - removedItemQuantity;
     localStorage.setItem('cartNumbers', productNumbers);
-    if(  productNumbers ) {
+    if(  productNumbers || productNumbers==0) {
         document.querySelector('.shoppingCartBtn span').textContent = productNumbers;
         document.querySelector('.shoppingCartTitle span').textContent = productNumbers;
     }
