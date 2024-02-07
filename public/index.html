@@ -70,13 +70,14 @@
         <h1 class="text-center display-1 my-5" style="color:darkred;">THE MENU</h1>
       
         <div class="tab-menu text-center shadow rounded-top menu-color ">
-          <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');" class="tab-link tablink" id="mainLink" aria-current="page">Starter</a>
-          <a href="javascript:void(0)" onclick="openMenu(event, 'Salads');" class="tab-link tablink" id="saladTab">Salads</a>
-          <a href="javascript:void(0)" onclick="openMenu(event, 'Sandwich');" class="tab-link tablink" id="starterTab">Sandwich</a>
-          <a href="javascript:void(0)" onclick="openMenu(event, 'Plate');" class="tab-link tablink" id="plateTab">Plate</a>
-          <a href="javascript:void(0)" onclick="openMenu(event, 'familyPack');" class="tab-link tablink" id="familyPackTab">Family Pack</a>
-          <a href="javascript:void(0)" onclick="openMenu(event, 'pureChicken');" class="tab-link tablink" id="pureChickenTab">Family Pack</a>
-          <a href="javascript:void(0)" onclick="openMenu(event, 'freshChicken');" class="tab-link tablink" id="freshChickenTab">Fresh Meat and Poultry</a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');" class="tab-link tablink border" id="mainLink" aria-current="page">Starter</a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Salads');" class="tab-link tablink border" id="saladTab">Salads</a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Sandwich');" class="tab-link tablink border" id="starterTab">Sandwich</a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Plate');" class="tab-link tablink border" id="plateTab">Plate</a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'familyPack');" class="tab-link tablink border" id="familyPackTab">Family Pack</a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Beverages');" class="tab-link tablink border" id="beveragesTab">Beverages</a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'addOns');" class="tab-link tablink border" id="addOnsTab">Add-ons</a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'freshChicken');" class="tab-link tablink border" id="freshChickenTab">Fresh Meat and Poultry</a>
       </div>
   
         <!-- Starter Menu -->
@@ -84,7 +85,7 @@
           <!-- Potato Wedges -->
           <div>
           <div class="d-flex justify-content-between align-items-baseline">
-            <h1 class="itemName mb-0 display-3"><b>potato wedges </b><span class="badge bg-transparentDarkRed small-tag">Seasonal</span></h1><span class="itemTag d-none">potato-wedges</span>
+            <h1 class="itemName mb-0 display-3"><b>potato wedges </b></h1><span class="itemTag d-none">potato-wedges</span>
             <div class="badge text-white buttonBackground">
               <span>$</span><span class="itemPrice">5.50</span>
             </div>
@@ -264,7 +265,7 @@
         <!-- tabouleh -->
         <div>
           <div class="d-flex justify-content-between align-items-baseline">
-            <h1 class="itemName mb-0 display-3"><b>Tabouleh </b><span class="badge bg-transparentDarkRed small-tag">Popular</span></h1><span class="itemTag d-none">tabouleh</span>
+            <h1 class="itemName mb-0 display-3"><b>Tabouleh </b></h1><span class="itemTag d-none">tabouleh</span>
             <div class="badge text-white buttonBackground">
               <span>$</span><span class="itemPrice">13.50</span>
             </div>
@@ -979,6 +980,96 @@
             </div>
           </div>
 
+        </div>
+
+        <!-- Beverages Menu -->
+        <div id="Beverages" class="container-fluid menu p-4 bg-white shadow">
+          <!-- Pepsi -->
+          <div>
+            <div class="d-flex justify-content-between align-items-baseline">
+              <h1 class="itemName mb-0 display-3"><b>Pepsi</b></h1><span class="itemTag d-none">Pepsi</span>
+              <div class="badge text-white buttonBackground">
+                <span>$</span><span class="itemPrice">17.00</span>
+              </div>
+            </div>
+            <div class="badge buttonBackground text-white addToCart">
+              <span >Add to cart</span>
+            </div>
+          </div>
+          <hr class="text-muted">
+
+          <!-- Miranda -->
+          <div>
+            <div class="d-flex justify-content-between align-items-baseline">
+              <h1 class="itemName mb-0 display-3"><b>Miranda</b></h1><span class="itemTag d-none">Miranda</span>
+              <div class="badge text-white buttonBackground">
+                <span>$</span><span class="itemPrice">17.00</span>
+              </div>
+            </div>
+            <div class="badge buttonBackground text-white addToCart">
+              <span >Add to cart</span>
+            </div>
+          </div>
+          <hr class="text-muted">
+
+          <!-- 7UP -->
+          <div>
+            <div class="d-flex justify-content-between align-items-baseline">
+              <h1 class="itemName mb-0 display-3"><b>7up</b></h1><span class="itemTag d-none">7up</span>
+              <div class="badge text-white buttonBackground">
+                <span>$</span><span class="itemPrice">17.00</span>
+              </div>
+            </div>
+            <div class="badge buttonBackground text-white addToCart">
+              <span >Add to cart</span>
+            </div>
+          </div>
+          <hr class="text-muted">
+
+          <!-- Water -->
+          <div>
+            <div class="d-flex justify-content-between align-items-baseline">
+              <h1 class="itemName mb-0 display-3"><b>Water</b></h1><span class="itemTag d-none">Water</span>
+              <div class="badge text-white buttonBackground">
+                <span>$</span><span class="itemPrice">17.00</span>
+              </div>
+            </div>
+            <div class="badge buttonBackground text-white addToCart">
+              <span >Add to cart</span>
+            </div>
+          </div>
+          <hr class="text-muted">
+        </div>
+
+        <!-- Add Ons Menu -->
+        <div id="addOns" class="container-fluid menu p-4 bg-white shadow">
+          <!-- Cheddar Cheese -->
+          <div>
+            <div class="d-flex justify-content-between align-items-baseline">
+              <h1 class="itemName mb-0 display-3"><b>Cheddar Cheese</b></h1><span class="itemTag d-none">Cheddar-Cheese</span>
+              <div class="badge text-white buttonBackground">
+                <span>$</span><span class="itemPrice">17.00</span>
+              </div>
+            </div>
+            <div class="badge buttonBackground text-white addToCart">
+              <span >Add to cart</span>
+            </div>
+          </div>
+          <hr class="text-muted">
+
+          <!-- Barbecue -->
+          <div>
+            <div class="d-flex justify-content-between align-items-baseline">
+              <h1 class="itemName mb-0 display-3"><b>Barbecue</b></h1><span class="itemTag d-none">Barbecue</span>
+              <div class="badge text-white buttonBackground">
+                <span>$</span><span class="itemPrice">17.00</span>
+              </div>
+            </div>
+            <div class="badge buttonBackground text-white addToCart">
+              <span >Add to cart</span>
+            </div>
+          </div>
+          <hr class="text-muted">
         </div>
 
         <!-- Fresh Chicken menu -->

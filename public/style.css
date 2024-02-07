@@ -46,6 +46,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Alumni Sans", sans-serif}
   min-width: 130px; /* Set a minimum width for each tab */
   padding: 10px;
   color: black;
+  border-right-color: rgb(128, 2, 2) !important;
 }
 
 /* Hide on small screens */
